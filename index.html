@@ -9,13 +9,17 @@
 <body>
   <header class="site-header">
     <div class="profile">
-      <img src="assets/profile.jpg" alt="Profile photo" class="profile-img">
-      <div class="profile-name">Your Name</div>
+      <img id="profile-img" src="assets/profile.jpg" alt="Profile photo" class="profile-img">
+      <input type="file" id="profile-upload" accept="image/*">
     </div>
   </header>
 
   <main class="hero">
     <h1 class="hello">HELLO!!!!</h1>
   </main>
+
+  <!-- Confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
