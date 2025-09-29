@@ -1,5 +1,4 @@
 :root {
-  --accent-purple: #CB9DF0;
   --mint-green: #98FF98;
   --light-orange: #FFD9A0;
   --profile-size: 80px;
@@ -55,16 +54,9 @@ body {
   text-align: center;
 }
 
-.hello {
-  margin: 0;
-  font-size: clamp(64px, 14vw, 160px);
-  color: var(--accent-purple);
-  font-weight: 900;
-}
-
 .countdown {
-  margin-top: 20px;
-  font-size: 2rem;
+  font-size: clamp(48px, 12vw, 120px);
   color: var(--mint-green);
-  font-weight: bold;
+  font-weight: 900;
+  text-align: center;
 }
