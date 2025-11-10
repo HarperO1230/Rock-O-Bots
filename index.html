@@ -1,207 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>The Life of a Showgirl Countdown</title>
-  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: url('https://www.transparenttextures.com/patterns/glitter.png'), #F87540;
-      background-size: cover;
-      font-family: 'Alfa Slab One', serif;
-      text-align: center;
-      color: #fff;
-    }
-    h1 {
-      font-size: 2.5em;
-      color: #77BDA2;
-      margin-top: 40px;
-    }
-    #countdown {
-      font-size: 4em;
-      color: #93C9A7;
-      margin-bottom: 40px;
-    }
-    .game-container {
-      margin: 40px auto;
-      width: 80%;
-      max-width: 800px;
-      background: rgba(255,255,255,0.1);
-      padding: 20px;
-      border-radius: 12px;
-    }
-    h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      color: #fff;
-    }
-    .question {
-      font-size: 1.5em;
-      margin-bottom: 20px;
-    }
-    .options button {
-      display: block;
-      margin: 10px auto;
-      padding: 12px 20px;
-      font-size: 1.1em;
-      font-family: 'Alfa Slab One', serif;
-      background: #77BDA2;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    .options button:hover {
-      background: #93C9A7;
-    }
-    input {
-      font-size: 1.1em;
-      padding: 10px;
-      width: 70%;
-      margin: 10px auto;
-      display: block;
-      text-align: center;
-      border: 2px solid #77BDA2;
-      border-radius: 6px;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Profile — 3D Creations Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>'The Life of a Showgirl' is released in:</h1>
-  <div id="countdown"></div>
+  <header class="site-header">
+    <div class="profile">
+      <img class="avatar" src="https://via.placeholder.com/120x120.png?text=You" alt="Profile avatar">
+      <div class="profile-text">
+        <h1 class="name">Your Name</h1>
+        <p class="subtitle">3D maker • 3D-printing • Laser cutter • Cricut</p>
+      </div>
+    </div>
+    <nav class="top-nav">
+      <a href="#gallery">Gallery</a>
+      <a href="#upload">Upload</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
 
-  <div class="game-container">
-    <h2>Taylor Swift Trivia</h2>
-    <div id="trivia-question" class="question"></div>
-    <div id="trivia-options" class="options"></div>
-  </div>
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-inner">
+        <h2>Showcase your 3D creations</h2>
+        <p>Upload photos of prints, prototypes, and laser-cut builds — the gallery shows them right away.</p>
+        <a class="cta" href="#upload">Add a photo</a>
+      </div>
+      <div class="hero-image" aria-hidden="true"></div>
+    </section>
 
-  <div class="game-container">
-    <h2>Taylor Swift Lyric Fill-in-the-Blank</h2>
-    <div id="lyric-question" class="question"></div>
-    <input type="text" id="lyric-answer" placeholder="Type your answer...">
-  </div>
+    <section id="upload" class="upload-section card">
+      <h3>Upload photos</h3>
+      <p>Drag & drop or choose images. Images are saved in your browser (private to your device).</p>
 
-  <script>
-    // COUNTDOWN
-    function updateCountdown() {
-      const target = new Date("October 3, 2025 00:00:00").getTime();
-      const now = new Date().getTime();
-      const distance = target - now;
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      document.getElementById("countdown").innerHTML =
-        `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    }
-    setInterval(updateCountdown, 1000);
+      <div id="drop-area" class="drop-area">
+        <input id="fileElem" type="file" accept="image/*" multiple />
+        <label for="fileElem" class="button">Select images</label>
+        <p class="muted">or drag images here</p>
+      </div>
 
-    // TRIVIA QUESTIONS
-    const triviaQuestions = [
-      {
-        q: "What year was Taylor Swift born?",
-        options: ["1987", "1989", "1990", "1992"],
-        answer: "1989"
-      },
-      {
-        q: "Which album features the song 'All Too Well'?",
-        options: ["Fearless", "Speak Now", "Red", "1989"],
-        answer: "Red"
-      },
-      {
-        q: "What is Taylor Swift’s middle name?",
-        options: ["Allison", "Alison", "Alexis", "Alyssa"],
-        answer: "Alison"
-      },
-      {
-        q: "Which Taylor Swift album includes 'You Belong With Me'?",
-        options: ["Taylor Swift", "Fearless", "Speak Now", "Red"],
-        answer: "Fearless"
-      },
-      {
-        q: "Who is the subject of Taylor's song 'Dear John'?",
-        options: ["John Mayer", "Joe Jonas", "Harry Styles", "Jake Gyllenhaal"],
-        answer: "John Mayer"
-      },
-      {
-        q: "Which song won Taylor her first Grammy for Album of the Year?",
-        options: ["Fearless", "Red", "1989", "Folklore"],
-        answer: "Fearless"
-      },
-      {
-        q: "What was Taylor Swift’s debut single?",
-        options: ["Tim McGraw", "Our Song", "Teardrops on My Guitar", "Picture to Burn"],
-        answer: "Tim McGraw"
-      },
-      {
-        q: "Which Taylor Swift album was the first to win Album of the Year at the Grammys?",
-        options: ["Fearless", "1989", "Folklore", "Speak Now"],
-        answer: "Fearless"
-      },
-      {
-        q: "What city was Taylor Swift born in?",
-        options: ["Wyomissing, Pennsylvania", "Nashville, Tennessee", "Reading, Pennsylvania", "Philadelphia, Pennsylvania"],
-        answer: "Reading, Pennsylvania"
-      },
-      {
-        q: "Which song did Taylor release as her debut country hit?",
-        options: ["Our Song", "Tim McGraw", "Picture to Burn", "Teardrops on My Guitar"],
-        answer: "Tim McGraw"
-      },
-      // … (Imagine here, I’d continue until we have a **full unique 100+ trivia set** with no repeats)
-    ];
+      <div id="upload-preview" class="upload-preview"></div>
+      <div class="controls">
+        <button id="clearAll" class="btn ghost">Clear all from this device</button>
+      </div>
+    </section>
 
-    // LYRIC FILL-IN-THE-BLANKS
-    const lyricQuestions = [
-      {q: "'Cause darling I'm a ____ dressed like a daydream", a: "nightmare"},
-      {q: "You belong with ____", a: "me"},
-      {q: "Romeo take me somewhere we can be ____", a: "alone"},
-      {q: "I knew you were ____ when you walked in", a: "trouble"},
-      {q: "Band-aids don't fix ____ holes", a: "bullet"},
-      {q: "We are never ever getting back ____", a: "together"},
-      {q: "Loving him is like driving a new ____ down a dead-end street", a: "Maserati"},
-      {q: "Welcome to New ____", a: "York"},
-      {q: "So it's gonna be forever, or it's gonna go down in ____", a: "flames"},
-      {q: "This love is difficult, but it's ____", a: "real"},
-      // … (Continue until we have at least **50+ unique lyric blanks**)
-    ];
+    <section id="gallery" class="gallery-section">
+      <h3>Gallery</h3>
+      <div id="galleryGrid" class="gallery-grid" aria-live="polite"></div>
+      <p class="muted small">Tip: click an image to open it in full size. Delete to remove from this device's gallery.</p>
+    </section>
 
-    // TRIVIA LOGIC
-    function loadTrivia() {
-      const randomQ = triviaQuestions[Math.floor(Math.random() * triviaQuestions.length)];
-      document.getElementById("trivia-question").innerText = randomQ.q;
-      const optionsDiv = document.getElementById("trivia-options");
-      optionsDiv.innerHTML = "";
-      randomQ.options.forEach(opt => {
-        const btn = document.createElement("button");
-        btn.innerText = opt;
-        btn.onclick = () => {
-          alert(opt === randomQ.answer ? "Correct!" : "Wrong!");
-          loadTrivia(); // next question
-        };
-        optionsDiv.appendChild(btn);
-      });
-    }
+    <section id="about" class="about card">
+      <h3>About this site</h3>
+      <p>This is a static profile site you can host on GitHub Pages. Uploads are stored in the browser using IndexedDB — they won't be visible to other people unless you configure a server or external storage.</p>
+    </section>
+  </main>
 
-    // LYRIC LOGIC
-    function loadLyric() {
-      const randomQ = lyricQuestions[Math.floor(Math.random() * lyricQuestions.length)];
-      document.getElementById("lyric-question").innerText = randomQ.q;
-      const input = document.getElementById("lyric-answer");
-      input.value = "";
-      input.onkeypress = (e) => {
-        if (e.key === "Enter") {
-          alert(input.value.toLowerCase().trim() === randomQ.a.toLowerCase() ? "Correct!" : "Wrong!");
-          loadLyric(); // next lyric
-        }
-      };
-    }
+  <footer class="site-footer">
+    <p>Made with ❤️ • Light pink–purple theme • Host on GitHub Pages</p>
+  </footer>
 
-    loadTrivia();
-    loadLyric();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
