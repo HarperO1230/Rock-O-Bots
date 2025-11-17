@@ -7,44 +7,60 @@ body {
 }
 
 header {
-  background-color: rgba(255, 255, 255, 0.4);
   padding: 2em 1em;
+  background: rgba(255, 255, 255, 0.4);
   border-bottom: 2px solid #caa7ff;
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 3em;
   margin-bottom: 0.2em;
   color: #5b2e91;
+  letter-spacing: 2px;
 }
 
-p {
-  font-size: 1.1em;
-  color: #4a2c6a;
+.album-title span {
+  color: #8b3de6;
+  font-weight: bold;
 }
 
-#gallery {
-  margin: 3em auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#gallery img {
+#album-cover img {
   width: 80%;
   max-width: 850px;
-  border-radius: 10px;
+  margin: 2em auto;
+  border-radius: 12px;
   box-shadow: 0 0 25px rgba(150, 0, 255, 0.25);
-  transition: transform 0.3s ease;
 }
 
-#gallery img:hover {
-  transform: scale(1.03);
+section {
+  margin: 2em auto;
+  width: 90%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 1.5em;
+  border-radius: 12px;
+  border: 2px solid #caa7ff;
+}
+
+h2 {
+  color: #5b2e91;
+  margin-bottom: 0.5em;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  padding: 0.3em 0;
+  font-size: 1.1em;
 }
 
 footer {
+  margin-top: 3em;
   padding: 1em;
-  background-color: rgba(255, 255, 255, 0.4);
-  font-size: 0.9em;
+  background: rgba(255, 255, 255, 0.4);
   border-top: 2px solid #caa7ff;
+  font-size: 0.9em;
 }
