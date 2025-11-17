@@ -1,92 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Rock-O-Bots — Decoding Bugs</title>
+    <title>Rock-O-Bots — Decoding Bugs</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, aquamarine, #5fe7d8);
+            background-color: #7fffd4; /* Aquamarine */
             margin: 0;
-            padding: 0;
-            text-align: center;
-            color: #03463c;
         }
-
         header {
+            background-color: #009b8e;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        nav {
+            background-color: #00b7a3;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .content {
             padding: 40px;
+            text-align: center;
         }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            margin-top: 40px;
-            font-size: 2rem;
-        }
-
-        .album {
-            margin-top: 20px;
-            font-style: italic;
-            font-size: 1.5rem;
-        }
-
         .tour-list {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: left;
-            margin-top: 20px;
-            background: rgba(255, 255, 255, 0.4);
+            background: white;
             padding: 20px;
-            border-radius: 12px;
-        }
-
-        .tour-list div {
-            margin: 8px 0;
-            font-size: 1.2rem;
-        }
-
-        .footer {
-            margin-top: 50px;
-            padding: 20px;
-            font-size: 0.9rem;
-            opacity: 0.8;
+            width: 60%;
+            margin: auto;
+            border-radius: 8px;
         }
     </style>
 </head>
-<body>
 
+<body>
     <header>
-        <h1>The Rock-O-Bots</h1>
-        <div class="album">New Album Out Now: <strong>Decoding Bugs</strong></div>
+        <h1>Rock-O-Bots</h1>
+        <h3>New Album Out Now: <i>Decoding Bugs</i></h3>
     </header>
 
-    <h2>2025 World Tour</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="stream.html">Stream</a>
+        <a href="tour2026.html">World Tour 2026</a>
+        <a href="merch.html">Merch</a>
+    </nav>
 
-    <div class="tour-list">
-        <div>🗓️ Jan 12 — Tokyo, Japan</div>
-        <div>🗓️ Jan 20 — Seoul, South Korea</div>
-        <div>🗓️ Feb 5 — Sydney, Australia</div>
-        <div>🗓️ Feb 19 — Los Angeles, USA</div>
-        <div>🗓️ Mar 3 — Chicago, USA</div>
-        <div>🗓️ Mar 10 — Toronto, Canada</div>
-        <div>🗓️ Mar 24 — Mexico City, Mexico</div>
-        <div>🗓️ Apr 1 — London, UK</div>
-        <div>🗓️ Apr 12 — Paris, France</div>
-        <div>🗓️ Apr 20 — Berlin, Germany</div>
-        <div>🗓️ May 2 — Rome, Italy</div>
-        <div>🗓️ May 18 — Barcelona, Spain</div>
-        <div>🗓️ Jun 1 — São Paulo, Brazil</div>
-        <div>🗓️ Jun 14 — Buenos Aires, Argentina</div>
-        <div>🗓️ Jun 29 — New York City, USA</div>
+    <div class="content">
+        <h2>Catch the Rock-O-Bots Live!</h2>
+        <div class="tour-list">
+            <h3>Upcoming Tour Dates</h3>
+            <p>• December 12, 2025 — Miami, FL</p>
+            <p>• January 9, 2026 — Seattle, WA</p>
+            <p>• February 14, 2026 — Chicago, IL</p>
+            <p>• March 20, 2026 — Phoenix, AZ</p>
+            <p>• April 2, 2026 — Atlanta, GA</p>
+            <p>• May 11, 2026 — Denver, CO</p>
+            <p>• June 8, 2026 — Boston, MA</p>
+        </div>
     </div>
-
-    <div class="footer">
-        © 2025 The Rock-O-Bots. All rights reserved.
-    </div>
-
 </body>
 </html>
