@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-O-Bots — Merch</title>
+
+    <!-- Orbitron Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(135deg, #ff9966, #ff5e62);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header {
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .merch-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .item {
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid white;
+        }
+
+        .item img {
+            width: 100%;
+            border-radius: 10px;
+            border: 2px solid white;
+        }
+
+        .item h2 {
+            margin-top: 15px;
+            font-size: 1.3rem;
+        }
+
+        .item p {
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Rock-O-Bots Merch</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="stream.html">Stream</a>
+            <a href="tour.html">Tour</a>
+            <a href="merch.html">Merch</a>
+        </nav>
+    </header>
+
+    <section class="merch-grid">
+
+        <div class="item">
+            <img src="rockobots-design.png" alt="Rock-O-Bots Shirt">
+            <h2>Debugging Bugs T-Shirt</h2>
+            <p>Soft cotton shirt featuring the official Debugging Bugs artwork.</p>
+        </div>
+
+        <div class="item">
+            <img src="rockobots-design.png" alt="Rock-O-Bots Hoodie">
+            <h2>Rock-O-Bots Hoodie</h2>
+            <p>Stay warm with this cozy hoodie printed with the band’s robot design.</p>
+        </div>
+
+        <div class="item">
+            <img src="rockobots-design.png" alt="Rock-O-Bots Poster">
+            <h2>World Tour Poster</h2>
+            <p>A glossy poster of the Rock-O-Bots Debugging Bugs World Tour.</p>
+        </div>
+
+    </section>
+
+</body>
+</html>
