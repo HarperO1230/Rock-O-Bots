@@ -2,99 +2,146 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Rock-O-Bots | World Tour 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock-O-Bots | Tour</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Orbitron Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+
     <style>
         body {
             margin: 0;
-            font-family: "Orbitron", sans-serif;
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(135deg, #ff7a18, #ff4e8a);
             color: white;
-            background: linear-gradient(to bottom, #ff9933, #ff66b3);
             text-align: center;
         }
-        nav {
-            padding: 25px;
-            font-size: 20px;
+
+        header {
+            padding: 30px;
         }
+
         nav a {
             color: white;
-            margin: 0 18px;
             text-decoration: none;
-            font-weight: 700;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
         }
+
         h1 {
-            font-size: 48px;
-            margin-top: 50px;
+            margin-top: 20px;
+            font-size: 3rem;
         }
-        ul {
+
+        .tour-list {
+            max-width: 900px;
+            margin: 50px auto;
+            text-align: left;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .tour-list li {
             list-style: none;
-            padding: 0;
-            max-width: 700px;
-            margin: 40px auto;
-            font-size: 22px;
-            line-height: 1.9;
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .tickets-button {
+            display: inline-block;
+            margin: 50px auto;
+            padding: 18px 45px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            border: 3px solid white;
+            background: transparent;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .tickets-button:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 25px rgba(255,255,255,0.7);
+        }
+
+        footer {
+            margin: 40px 0;
+            font-size: 0.9rem;
+            opacity: 0.9;
         }
     </style>
 </head>
 <body>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="stream.html">Stream</a>
-    <a href="tour.html">Tour</a>
-    <a href="merch.html">Merch</a>
-</nav>
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="stream.html">Stream</a>
+        <a href="tour.html">Tour</a>
+        <a href="merch.html">Merch</a>
+    </nav>
+    <h1>Debugging Bugs World Tour 2026</h1>
+</header>
 
-<h1>2026 World Tour</h1>
+<ul class="tour-list">
+    <li>Jan 12, 2026 — Tokyo, Japan</li>
+    <li>Jan 14, 2026 — Osaka, Japan</li>
+    <li>Jan 17, 2026 — Seoul, South Korea</li>
+    <li>Jan 20, 2026 — Taipei, Taiwan</li>
+    <li>Jan 23, 2026 — Manila, Philippines</li>
+    <li>Jan 26, 2026 — Bangkok, Thailand</li>
+    <li>Jan 29, 2026 — Singapore</li>
+    <li>Feb 2, 2026 — Sydney, Australia</li>
+    <li>Feb 5, 2026 — Melbourne, Australia</li>
+    <li>Feb 9, 2026 — Auckland, New Zealand</li>
+    <li>Feb 14, 2026 — Honolulu, Hawaii</li>
+    <li>Feb 18, 2026 — Los Angeles, CA</li>
+    <li>Feb 20, 2026 — San Diego, CA</li>
+    <li>Feb 23, 2026 — Phoenix, AZ</li>
+    <li>Feb 26, 2026 — Denver, CO</li>
+    <li>Feb 28, 2026 — Dallas, TX</li>
+    <li>Mar 2, 2026 — Austin, TX</li>
+    <li>Mar 5, 2026 — Houston, TX</li>
+    <li>Mar 8, 2026 — Atlanta, GA</li>
+    <li>Mar 11, 2026 — Miami, FL</li>
 
-<ul>
-    <li>Seoul, South Korea — January 5</li>
-    <li>Tokyo, Japan — January 9</li>
-    <li>Kyoto, Japan — January 12</li>
-    <li>Osaka, Japan — January 15</li>
-    <li>Beijing, China — January 20</li>
-    <li>Shanghai, China — January 23</li>
-    <li>Bangkok, Thailand — January 28</li>
-    <li>Taipei, Taiwan — February 2</li>
-    <li>Singapore — February 6</li>
-    <li>Manila, Philippines — February 10</li>
-    <li>Jakarta, Indonesia — February 14</li>
-    <li>Sydney, Australia — February 20</li>
-    <li>Melbourne, Australia — February 24</li>
-    <li>Auckland, New Zealand — February 28</li>
-    <li>Honolulu, Hawaii — March 6</li>
-    <li>Los Angeles, California — March 10</li>
-    <li>San Francisco, California — March 14</li>
-    <li>Seattle, Washington — March 18</li>
-    <li>Denver, Colorado — March 22</li>
-    <li>Dallas, Texas — March 26</li>
-    <li>Houston, Texas — March 29</li>
-    <li>Chicago, Illinois — April 2</li>
-    <li>Detroit, Michigan — April 5</li>
-    <li>Atlanta, Georgia — April 9</li>
-    <li>Miami, Florida — April 13</li>
-    <li>Orlando, Florida — April 16</li>
-    <li>Nashville, Tennessee — April 20</li>
-    <li>New Orleans, Louisiana — April 24</li>
-    <li>Phoenix, Arizona — April 28</li>
-    <li>Boston, Massachusetts — May 2</li>
-    <li>New York City, New York — May 6</li>
-    <li>Philadelphia, Pennsylvania — May 10</li>
-    <li>Toronto, Canada — May 14</li>
-    <li>Vancouver, Canada — May 18</li>
-    <li>Montreal, Canada — May 22</li>
-    <li>Mexico City, Mexico — May 28</li>
-    <li>London, England — June 4</li>
-    <li>Paris, France — June 8</li>
-    <li>Berlin, Germany — June 12</li>
-    <li>Rome, Italy — June 16</li>
-    <li>Barcelona, Spain — June 20</li>
-    <li>Amsterdam, Netherlands — June 24</li>
-    <li>Stockholm, Sweden — June 28</li>
-    <div class="links">
-        <a href="#">Buy Tickets Now!</a>
+    <li>Mar 14, 2026 — Orlando, FL</li>
+    <li>Mar 17, 2026 — Nashville, TN</li>
+    <li>Mar 20, 2026 — Chicago, IL</li>
+    <li>Mar 23, 2026 — Detroit, MI</li>
+    <li>Mar 26, 2026 — Toronto, Canada</li>
+    <li>Mar 29, 2026 — Montreal, Canada</li>
+    <li>Apr 1, 2026 — Boston, MA</li>
+    <li>Apr 4, 2026 — New York City, NY</li>
+    <li>Apr 7, 2026 — Philadelphia, PA</li>
+    <li>Apr 10, 2026 — Washington, DC</li>
+    <li>Apr 14, 2026 — London, UK</li>
+    <li>Apr 17, 2026 — Manchester, UK</li>
+    <li>Apr 20, 2026 — Paris, France</li>
+    <li>Apr 23, 2026 — Amsterdam, Netherlands</li>
+    <li>Apr 26, 2026 — Berlin, Germany</li>
+    <li>Apr 29, 2026 — Munich, Germany</li>
+    <li>May 2, 2026 — Zurich, Switzerland</li>
+    <li>May 5, 2026 — Milan, Italy</li>
+    <li>May 8, 2026 — Barcelona, Spain</li>
+    <li>May 11, 2026 — Madrid, Spain</li>
+    <li>May 15, 2026 — Lisbon, Portugal</li>
+    <li>May 18, 2026 — Dublin, Ireland</li>
+    <li>May 22, 2026 — Reykjavik, Iceland</li>
+    <li>May 26, 2026 — Stockholm, Sweden</li>
+    <li>May 30, 2026 — Helsinki, Finland</li>
 </ul>
+
+<div style="text-align:center;">
+    <a href="#" class="tickets-button">Buy Tickets Now!</a>
+</div>
+
+<footer>
+    © 2026 The Rock-O-Bots — Debugging Bugs World Tour
+</footer>
 
 </body>
 </html>
